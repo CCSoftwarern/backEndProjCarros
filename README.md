@@ -28,6 +28,6 @@
 
 ##POST /updateCarro
 
-##POST /listarCarros
+##GET /listarCarros
 
 
