@@ -88,15 +88,27 @@ WSGI_APPLICATION = 'backendlojacarros.wsgi.application'
 
 # settings.py
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'carros',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306'
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'carros',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306'
-    }
+        'default': {
+            'NAME': 'carros',
+            'ENGINE': 'mysql.connector.django',
+            'USER': 'root',
+            'PASSWORD': '',
+            'OPTIONS': {
+            'autocommit': True,
+            },
+        }
 }
 
 # Password validation
