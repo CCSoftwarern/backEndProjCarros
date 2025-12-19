@@ -7,9 +7,9 @@ class Carros(models.Model):
     urlimagem = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'carros'  # nome da tabela no banco
+        db_table = 'carro'  # nome da tabela no banco
         verbose_name = 'Carro'
-        verbose_name_plural = 'Carros'
+        verbose_name_plural = 'Carro'
         
     def __str__(self):
         return self.modelo

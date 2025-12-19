@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from .models import Carros
 from .serializers import CarrosSerializer
 from django.http import HttpResponse
+from django.shortcuts import render
 
 class ItemViewSet(viewsets.ModelViewSet):  # Certifique-se de que está usando a classe corretamente
     queryset = Carros.objects.all()
@@ -169,3 +170,5 @@ def listarCarros(request):
     return Response(serializer.data)
 
 
+def index(request):
+    return render(request, 'index.html') # index.html deve estar na pasta templates
